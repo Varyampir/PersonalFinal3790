@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (min-width: 601px) {
+	html {
+		background-color: 	#EEEEEE;	
+	}
+
+	body {
+		margin: 			0 auto;
+		padding: 			0;
+		-webkit-text-size-adjust: 100%;
+	}
+
+	#container {
+		height: 			auto !important;	
+		height: 			100%;
+		min-width:			601px;
+		max-width:			1024px;
+	}	
+
+	header h1 {
+		padding-top: 		1.5em;
+	}
+
+	header h1, header p {
+		padding-left: 		26%;
+	}
+
+	header img {
+		width: 				50%;
+		max-width: 			100px;
+	}
+
+	ul#myNav {
+		display: block;
+	}
+
+	button#showPhoneNav {
+		display: 			none;
+	}
+
+	nav {
+		margin:				0;
+		padding: 			1.5em 0;
+		float: 				left;
+		width: 				20%;
+		min-height: 		85em;
+		border-bottom: 		none;
+	}
+
+	nav ul {
+		 display: 			block !important;
+	}
+
+	nav ul li {
+		display: 			inline;
+	}
+
+	nav ul li a {
+		text-align: 		left;
+	}
+
+	nav li:hover ul {
+		left: 				auto;
+	}
+
+	nav ul li.active a {
+		color: 				#F15A24;
+	}
+
+	nav ul li a:hover,
+	nav ul li a:focus {
+		color: 				#FFFFFF;
+		background-color: 	#808080;
+	}
+
+	#content {
+		padding: 			0.5em 2%;
+		min-height: 		37em;
+		float: 				right;
+		width: 				74%;
+	}
+
+	div.column {		
+		clear: both;
+		padding: 0;
+	}
+
+	article	{
+		width: 46%;
+		float: left;
+		padding: 2%;
+		min-height: 20em;
+	}
+
+	input, select {
+	width: 					40%;
+	max-width: 				9em;
+	margin:					0.5em 1em;
+	}
+}

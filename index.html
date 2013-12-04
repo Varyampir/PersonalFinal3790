@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html lang="en" ng-app>
+	<head>
+	<meta charset="utf-8">
+	<!-- This start file was build by Paul Cheney after doing lots of research on the web -->
+	<title>LOC App</title>
+
+	<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging whena phone is turned sideways-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	
+
+	<!--STYLE SHEETS-->
+	<link rel="icon" type="image/png" href="img/weblabfavicon.png" />
+
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One|Sirin+Stencil|Offside|Sniglet|Cantarell' rel='stylesheet' type='text/css'>
+
+	<link href="css/reset.css" rel="stylesheet">
+	<!-- phone-default -->
+	<link href="css/phonedef.css" rel="stylesheet">
+	<!-- enhance-tablet -->
+	<link href="css/tablet.css" rel="stylesheet">
+	<!-- enhance-desktop -->
+	<link href="css/desk.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+	     
+	</head>
+
+<body ng-controller="locListCtrl">
+
+<div id="wrapper">
+	<div id="container">	
+		<header>
+			<img src="img/weblab.gif">
+			<h1>Web Lab Designs</h1>
+			<p>Varvara Jones @ UVU</p>
+			
+			<div class="stayOpen"></div>
+		</header>
+
+		<nav>
+			<button class="menuBtn" id="showPhoneNav">Menu</button>
+			<ul id="myNav">
+				<li><a href="http://dgm3790.inkedkeyboard.com/">Main</a></li>
+				<li><a href="http://dgm3790.inkedkeyboard.com/ninja1/index.html">Ninja 1</a></li>
+				<li><a href="http://dgm3790.inkedkeyboard.com/ninja2/index.html">Ninja 2</a></li>
+				<li><a href="http://dgm3790.inkedkeyboard.com/ninja3/index.html">Ninja 3</a></li>
+				<li class="active"><a href="http://dgm3790.inkedkeyboard.com/ninja3/index.html">Personal Final</a></li>
+				<li><a href="http://inkedkeyboard.com/portfolio.php">Inked Keyboard</a></li>
+			</ul><!--end of the navigation-->
+			
+			<div class="stayOpen"></div>
+		</nav><!--end of the navigation-->
+
+		<div id="content">
+
+			<h1>Current Project: Personal Final Project</h1>
+			<h3>Description: API + JSON using a <a href="http://www.loc.gov/pictures/api#HTML_and_JSON_for_every_URL_16">www.loc.gov API</a></h3>
+
+			<p>Project description: I am using Library Of Congress Prints and Photographs collections and API. The online catalog provides a "json serialization of the request-scoped state used to create every html page. This immediately enables PPOC to serve as a simple API for developers to make use of while building other applications, integrating Library data in new and innovative ways." Quoted text is taked from the <a href="http://www.loc.gov/pictures/api">About Prints and Photographs Online Catalog API</a> page</p>
+
+			<div id="searchbar" class="row">
+				<div class="column">
+					<!--Sidebar content-->
+			        Search: <input ng-model="query">
+			        Sort by:
+			        <select ng-model="orderProp">
+			          <option value="name">Alphabetical</option>
+			          <option value="age">Newest</option>
+			        </select>
+				</div>
+			</div>
+
+			<!--<div class="row">
+				<div class="column">
+      
+				    <article class="dribblers" ng-repeat="dribbler in dribblers | filter:query | orderBy:orderProp">
+
+				    	<figure class="width50r">
+                                <a href="{{dribbler.url}}"><img ng-src="{{dribbler.image_teaser_url}}" /></a>
+                                <figcaption>Title: {{dribbler.title}}<br />
+                                Artist: {{dribbler.player.name}}</figcaption>
+                         </figure>
+				    </article>
+
+				</div><!- -closes the column-->
+			<!--</div><!- -closes the row-->
+
+			<div class="row">
+				<div class="column">
+
+					<!--<form>
+					<label>Search The Collections</label>
+						<input name="searchinp" class="searchlocinp" type="text" placeholder="e.g. Cartoon">
+						<input type="submit" value="Search" ng-click="searchInLoc();">
+					</form>-->
+      
+				    <article class="searchLoc" ng-repeat="search in searchLoc | filter:query | orderBy:orderProp">
+
+				    	<figure class="width50r">
+				    			<figcaption>{{search.toptitle}}</figcaption>
+                                <a href="{{search.link}}"><img ng-src="{{search.thumb_large}}" /></a>
+                                <figcaption>{{search.title}}</figcaption>
+                         </figure>
+				    </article>
+
+				</div><!--closes the column-->
+			</div><!--closes the row-->
+
+
+			<div class="stayOpen"></div>
+			</div><!-- end of a row -->
+		</div><!-- end content -->
+	    <footer>©2013 by Varvara Jones for DGM 3790.</footer>
+
+	    </div> <!-- end container -->
+    </div> <!-- end wrapper -->
+	
+    <script src="http://code.jquery.com/jquery-latest.js"></script>        
+    
+    <script src="https://code.angularjs.org/1.2.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular-animate.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/hidebtn.js"></script>
+    <script src="js/app.js"></script>
+  	<script src="js/loccontrollers.js"></script>
+</body>
+</html>
